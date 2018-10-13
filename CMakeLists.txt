@@ -11,5 +11,5 @@ ADD_COMPILE_OPTIONS(-std=c++11)
 LINK_DIRECTORIES(/usr/local/lib /usr/lib)
 
 ADD_EXECUTABLE(strstr str/strstr/strstr.cpp)
-
+ADD_EXECUTABLE(anagrams str/anagrams/anagrams.cpp)
 

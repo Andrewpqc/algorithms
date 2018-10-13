@@ -35,3 +35,8 @@ cmake-build-debug/
 build/
 .idea/
 .vscode/
+Jalgorithms/.idea/
+Jalgorithms/.vscode/
+Jalgorithms/out/
+Jalgorithms/src/*.class
+Jalgorithms/Jalgorithms.iml

@@ -1,7 +1,6 @@
 // 二分搜索
 
-import java.util.Arrays; //Arrays.sort()
-import java.util.Collections;
+import java.util.Arrays; //Arrays.sort() 默认从小到大排序
 
 public class BinarySearch {
     public static int rank1(int[] arr, int key) {
@@ -17,14 +16,11 @@ public class BinarySearch {
     }
 
     public static int rank2(int[] arr, int l, int h, int key) {
-        while (l <= h) {
-            int mid = l + (h - l) / 2;
-            if (key < arr[mid])      return rank2(arr, l, mid - 1, key);
-            else if (key > arr[mid]) return rank2(arr, mid + 1, h, key);
-            else                     return mid;
-        }
-
-        return -1;
+        if (l > h) return -1;
+        int mid = l + (h - l) / 2;
+        if (key < arr[mid])      return rank2(arr, l, mid - 1, key);
+        else if (key > arr[mid]) return rank2(arr, mid + 1, h, key);
+        else                     return mid;
     }
 
     public static void main(String[] args) {

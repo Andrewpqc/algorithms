@@ -26,6 +26,7 @@ public class Stack<Item> implements Iterable<Item> {
 
     public Item pop() {
         if (len_ < 0.25 * cap_) resize(cap_ / 2);
+        items[len_]=null; //防止游离
         return items[--len_];
     }
 

@@ -8,7 +8,6 @@ public class BreadthFirstPaths {
     private int[] pathTo;
     final private int src;
 
-
     public BreadthFirstPaths(Graph g, int s) {
         marked = new boolean[g.V()];
         pathTo = new int[g.V()];
@@ -18,15 +17,14 @@ public class BreadthFirstPaths {
         q.enqueue(s);
         while (!q.isEmpty()) {
             int v = q.dequeue();
-            if (!marked[v]) {
-                marked[v] = true;
-                for (int i : g.adj(v)) {
-                    if (!marked[i]) {
-                        pathTo[i] = v;
-                        marked[i] = true;
-                        q.enqueue(i);
-                    }
+            marked[v] = true;
+            for (int i : g.adj(v)) {
+                if (!marked[i]) {
+                    pathTo[i] = v;
+                    marked[i] = true;
+                    q.enqueue(i);
                 }
+
             }
         }
     }

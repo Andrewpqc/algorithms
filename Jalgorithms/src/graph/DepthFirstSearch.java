@@ -5,7 +5,7 @@ public class DepthFirstSearch {
     private boolean[] marked;
     private int count;
 
-    /*
+    /**
      * @param g 需要处理的图
      * @param s 起点
      */

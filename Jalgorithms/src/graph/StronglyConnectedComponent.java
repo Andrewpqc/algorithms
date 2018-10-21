@@ -1,5 +1,5 @@
 /**
- * 强联通分量的计算
+ * 强联通分量的计算 Korasaju算法
  */
 
 package graph;
@@ -26,7 +26,6 @@ public class StronglyConnectedComponent {
         for (int v : dg.adj(s))
             if (!marked[v]) dfs(dg, v);
     }
-
 
     public boolean stronglyConnected(int x, int y) {
         return id[x] == id[y];

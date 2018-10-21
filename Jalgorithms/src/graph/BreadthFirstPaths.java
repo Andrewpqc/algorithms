@@ -13,7 +13,6 @@ public class BreadthFirstPaths {
         pathTo = new int[g.V()];
         src = s;
         Queue<Integer> q = new Queue<Integer>();
-        marked[s] = true;
         q.enqueue(s);
         while (!q.isEmpty()) {
             int v = q.dequeue();
@@ -21,7 +20,6 @@ public class BreadthFirstPaths {
             for (int i : g.adj(v)) {
                 if (!marked[i]) {
                     pathTo[i] = v;
-                    marked[i] = true;
                     q.enqueue(i);
                 }
 

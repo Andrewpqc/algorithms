@@ -4,7 +4,6 @@
 
 package graph;
 
-
 public class TwoColor {
     private boolean[] marked;
     private boolean[] color;

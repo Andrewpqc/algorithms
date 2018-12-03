@@ -11,17 +11,17 @@ void merge(int *arr, int low,int mid,int high){
     int* newArr= (int*) malloc(sizeof(int)*(high-low+1));
     int current_index=0;
     while (low1<=high1 && low2<=high2){
-        if(arr[low1]>=arr[low2])
-            newArr[current_index++]=arr[low2++];
+        if(arr[low1]>=arr[low2]) newArr[current_index++]=arr[low2++];
         else newArr[current_index++]=arr[low1++];
     }
 
     //将剩下的元素直接复制到newArr中
-    if(low1 == high1){
+    if(low2 <= high2){
         while (low2<=high2){
             newArr[current_index++]=arr[low2++];
         }
-    }else{
+    }
+    if(low1<=high1){
         while (low1<high1){
             newArr[current_index++]=arr[low1++];
         }

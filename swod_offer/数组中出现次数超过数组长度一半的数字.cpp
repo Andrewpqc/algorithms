@@ -2,6 +2,7 @@
 
 using namespace std;
 
+/*挖坑填坑*/
 int partition(int *array, int low, int high) {
     int i = low;
     int j = high;
@@ -33,10 +34,10 @@ int EleOfHalfArray(int *array, int length) {
 
     while (mid != povit_index) {
         if (mid > povit_index) {
-            low++;
+            low=povit_index+1;
             povit_index = partition(array, low, high);
         } else {
-            high++;
+            high=povit_index-1;
             povit_index = partition(array, low, high);
         }
     }
